@@ -150,3 +150,6 @@ media/
 
 # Others
 node_modules
+
+# файлы для локального запуска
+docker-compose.yml
