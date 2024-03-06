@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: tests
     if: github.ref == 'refs/heads/main'
-    environmet: production
+    environment: production
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: frontend_tests
     if: github.ref == 'refs/heads/main'
-    environmet: production
+    environment: production
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -110,7 +110,7 @@ jobs:
     name: Push gateway Docker image to DockerHub
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    environmet: production
+    environment: production
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -177,4 +177,3 @@ jobs:
           Push сделал ${{ github.actor }}
           Сообщение коммита ${{ github.event.commits[0].message }}
           Ссылка на коммит https://github.com/${{ github.repository }}/commit/${{github.sha}}
-
