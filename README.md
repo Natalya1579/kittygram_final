@@ -1,6 +1,5 @@
 
-![Main Kittygram workflow]
-(https://github.com/github/docs/actions/workflows/kittygram_workflow.yml/badge.svg)
+![Main Kittygram workflow](https://github.com/github/docs/actions/workflows/kittygram_workflow.yml/badge.svg)
 
 ### Описание
 
