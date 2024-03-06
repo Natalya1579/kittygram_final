@@ -1,5 +1,5 @@
 
-![Main Kittygram workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Main Kittygram workflow](https://github.com/Natalya1579/kittygram_final/actions/workflows/kittygram_workflow.yml/badge.svg)
 
 ### Описание
 
@@ -108,5 +108,4 @@ dockerhub_username: ваш_логин_на_докерхабе
 - Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
 - В корне проекта есть файл `kittygram_workflow.yml`.
 
-
-Автор: Бугаева Н.
+Автор: Бугаева Наталья
