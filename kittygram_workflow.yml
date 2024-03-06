@@ -170,6 +170,6 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          Push сделал ${{ github.actor }}
+          Push сделал github.actor
           Соообщение коммита ${{ github.event.commits[0].message }}
           Ссылка на коммит https://github.com/${{ github.repository }}/commit/${{github.sha}}
