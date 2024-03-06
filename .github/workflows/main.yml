@@ -177,3 +177,4 @@ jobs:
           Push сделал ${{ github.actor }}
           Сообщение коммита ${{ github.event.commits[0].message }}
           Ссылка на коммит https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
