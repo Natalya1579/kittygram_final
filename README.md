@@ -1,5 +1,4 @@
-
-![Main Kittygram workflow](https://github.com/github/docs/actions/workflows/kittygram_workflow.yml/badge.svg)
+![Main Kittygram workflow](https://github.com/Natalya1579/kittygram_final/actions/workflows/main.yml/badge.svg)
 
 ### Описание
 
@@ -14,19 +13,13 @@
 
 
 ### Стек использованных технологий
-* Django==3.2.3  
-* djangorestframework==3.12.4
-* djoser==2.1.0
-* webcolors==1.11.1
-* psycopg2-binary==2.9.3
-* Pillow==9.0.0
-* pytest==6.2.4
-* pytest-django==4.4.0
-* pytest-pythonpath==0.7.3
-* PyYAML==6.0
-* flake8==6.0.0
-* flake8-isort==6.0.0
-* python-dotenv==1.0.1
+* Python
+* Django
+* DRF
+* Djoser
+* Docker
+* PostgreSQL
+* Nginx
 
 ### Установка
 Как развернуть проект на локальной машине:
@@ -101,11 +94,5 @@ dockerhub_username: ваш_логин_на_докерхабе
 
 Для локального запуска тестов создайте виртуальное окружение, установите в него зависимости из backend/requirements.txt и запустите в корневой директории проекта `pytest`.
 
-##### Чек-лист для проверки перед отправкой задания
-
-- Проект Taski доступен по доменному имени, указанному в `tests.yml`.
-- Проект Kittygram доступен по доменному имени, указанному в `tests.yml`.
-- Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
-- В корне проекта есть файл `kittygram_workflow.yml`.
 
 Автор: Бугаева Наталья

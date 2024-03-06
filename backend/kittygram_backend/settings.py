@@ -1,6 +1,7 @@
 # flake8: noqa
 import os
 from pathlib import Path
+
 from django.core.management.utils import get_random_secret_key
 from dotenv import load_dotenv
 
@@ -10,17 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
-if DEBUG and DEBUG.lower() == 'true':
-    DEBUG = True
-DEBUG = False
-
-ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS')
-
-if ALLOWED_HOSTS_ENV:
-    ALLOWED_HOSTS = ALLOWED_HOSTS_ENV.split(', ')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost, 127.0.0.1').split(', ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -65,14 +58,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kittygram_backend.wsgi.application'
 
-
-if os.getenv('USE_SQLITE', False):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
-        }
-    }
+USE_SQLITE = os.getenv('USE_SQLITE', '').lower() in ['true', 1, 'yes']
 
 DATABASES = {
     'default': {
